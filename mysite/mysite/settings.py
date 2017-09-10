@@ -19,6 +19,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'xl&py20-^gk=_y%_@tc&utp(e5f6^k=s1zj-wrkul^1^bb+87v'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -30,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'personal','landingapp',
+    'personal','landingapp','blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

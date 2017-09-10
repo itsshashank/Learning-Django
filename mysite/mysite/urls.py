@@ -12,6 +12,9 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
+
+MY edits
+    we need to remove the $ from the r'^$' to include the other urls 
 """
 from django.conf.urls import url,include
 from django.contrib import admin
@@ -19,5 +22,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^landingapp/', include('landingapp.urls')),
-    url(r'^$', include('personal.urls')),
+    url(r'^', include('personal.urls')),
+    url(r'^blog/', include('blog.urls')),
 ]
